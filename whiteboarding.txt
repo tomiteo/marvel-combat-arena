@@ -18,3 +18,13 @@ battle(name1, name2, SEED#){
 Handle any errors or edge cases and display the message in a user friendly manner
 
 Provide clear instructions on how to retrieve and run your code
+
+Be sure to clearly list out any assumptions that you make throughout the process
+
+
+read input
+
+expect name1, name 2, seed #
+
+
+

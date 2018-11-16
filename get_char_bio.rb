@@ -31,8 +31,13 @@ def compare_bios (name1, name2, seed)
   name1_words_array = get_bio(name1).split
   name2_words_array = get_bio(name2).split
 
-  n1word = 'radioactive'
+  n1word = name1_words_array[seed-1].gsub(/\W/, '') 
   n2word = name2_words_array[seed-1].gsub(/\W/, '')
+
+  #This Regex strips out all non alphanumeric characters
+  #commas and periods probably aren't meant to be included in the comparison
+  #but apostraphes, hyphens, and periods (like in A.I.M. or 3-D) might
+  #so room for some optimization here.
 
   puts n1word
   puts n2word
@@ -48,12 +53,9 @@ def compare_bios (name1, name2, seed)
 
   n1word.length <=> n2word.length
 
-  #return [name1_seed_word,name2_seed_word].max_by(&:length) unless 
-  #  name1_seed_word || name2_seed_word == "Gamma" || "Radioactive"
-  #    name1_seed_word == "Gamma" || name1_seed_word == "Radioactive" ? name1_seed_word : name2_seed_word 
 end
 
-case compare_bios('spider-man','A.I.M.', 5)
+case compare_bios('Amun','Mystique', 7)
 when 1
   puts 'spider-man'
 when 0
