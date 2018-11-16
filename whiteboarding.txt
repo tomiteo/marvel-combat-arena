@@ -1,0 +1,20 @@
+
+
+Two provided character names:
+
+battle(name1, name2, SEED#){
+	compare length of specific word in their bio
+		specific word = SEED #
+			SEED# must be within 1-9
+				if SEED# ~within 1-9, throw error
+		Retrieve the bio for each character and parse the “description” field
+		Choose the WORD in each description corresponding to the provided SEED
+		longer wins
+			unless
+		The winner of the battle is the character whose WORD has the most characters EXCEPT if either character has a MAGIC WORD “Gamma” or “Radioactive” they automatically Win
+	return winning character
+}
+
+Handle any errors or edge cases and display the message in a user friendly manner
+
+Provide clear instructions on how to retrieve and run your code
