@@ -55,13 +55,13 @@ def compare_bios (name1, name2, seed)
 
 end
 
-case compare_bios('Amun','Mystique', 7)
+case compare_bios('Amun','Hulk', 7)
 when 1
-  puts 'spider-man'
+  puts 'Amun'
 when 0
   puts 'tie'
 when -1
-  puts 'A.I.M.'
+  puts 'Hulk'
 end
 
 #puts res.body if res.is_a?(Net::HTTPSuccess)
